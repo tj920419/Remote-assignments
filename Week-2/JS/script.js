@@ -81,7 +81,7 @@ function calculate(args){
 //Anwser-1
 calculate({op:"+", n1:3, n2:4});
 
-//Anwser-2 (不好意思這邊我怎麼寫都失敗，明天我會繼續嘗試)
+//Anwser-2
 class args{
     constructor (op, n1, n2){
         this.op = op;
@@ -90,11 +90,11 @@ class args{
     }
   }
   
-  var args1 = args("+",3,4);
+  var args1 = new args("+",3,4);
 
-  calculate (args){
+  calculate (args1);
 
-  }
+
 
 
 
