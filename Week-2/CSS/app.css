@@ -1,0 +1,335 @@
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    background-color: lightgrey;
+    font-size: 30px;
+    width: 100%;
+}
+
+.title {
+    text-align: left;
+    margin: 0;
+    width: 100%;
+    padding: 25px 0 25px 50px;
+}
+
+.ul-items {
+    text-align: right;
+    display: flex;
+    padding: 25px 50px 25px 0;
+    margin: 0;
+}
+
+.items {
+    width: 90px;
+    display: flex;    
+    margin: 0 15px;
+}
+
+.sidenav{
+	display: none;
+}
+
+.catalog {
+    display: none;
+}
+
+.welcome-message {
+    text-align: center;
+    background-color: lightsteelblue;
+    padding: 5%;
+    margin: 0;
+    font-size: 75px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 50px 30px 30px;
+    font-size: 50px;
+}
+
+.content-box-group {
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+}
+
+.content-box {
+    background-color: lightslategray;
+    margin: 20px 20px;
+    max-width: 580px;
+    padding: 10px 200px 200px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.content-box-2 {
+    display: none;
+    background-color: lightslategray;
+    margin: 20px 20px;
+    max-width: 580px;
+    padding: 10px 200px 200px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.content-box-group-hide {
+    display: none;
+    justify-content: center;
+    text-align: center; 
+}
+
+/* .content-box-hide {
+    display: none;
+    background-color: lightslategray;
+    margin: 1% 1%;
+    max-width: 580px;
+    padding: 2% 5% 15%;
+    text-align: center;
+    font-size: 20px;
+    width: 95%;  
+}  */
+
+.call-to-action {
+    text-align: center;
+    background-color: lightskyblue;
+    padding: 12px;
+    width: 200px;
+    margin: 20px auto;
+    font-size: 30px;
+}
+
+
+
+@media (min-width: 801px) and (max-width: 1200px) {
+    .welcome-message {
+        font-size: 45px;
+    }
+
+    .section-title {
+        text-align: center;
+        margin: 5% 3% 3%;
+        font-size: 30px;
+    }    
+
+    .content-box-group {
+        display: flex;
+        justify-content: center;
+        text-align: center; 
+    }
+    
+    .content-box-group-2 {
+        justify-content: center;
+        text-align: center; 
+    }
+
+    .content-box {
+        background-color: lightslategray;
+        margin: 1% 1%;
+        max-width: 80%;
+        padding: 2% 5% 15%;
+        text-align: center;
+        font-size: 20px;
+        width: 95%;    
+    }
+
+    .content-box-2 {
+        background-color: lightslategray;
+        margin: 1% 1%;
+        max-width: 80%;
+        padding: 2% 5% 15%;
+        text-align: center;
+        font-size: 20px;
+        width: 95%;    
+    }
+
+    .call-to-action {
+        text-align: center;
+        background-color: lightskyblue;
+        padding: 2%;
+        width: 20%;
+        margin: 2% auto;
+        font-size: 25px;
+    }
+
+}
+
+
+
+@media (min-width: 501px) and (max-width: 800px) {
+    .ul-items {
+        display: none;
+    }
+
+    .items {
+        display: none;
+    }
+
+    .catalog {
+        display: flex;
+        width: 10%;
+        height: 10%;
+
+    }
+
+    .welcome-message {
+        font-size: 45px;
+    }
+
+    .section-title {
+        text-align: center;
+        margin: 5% 3% 3%;
+        font-size: 30px;
+    }    
+
+    .content-box-group {
+        display: flex;
+        justify-content: center;
+        text-align: center; 
+    }
+    
+    .content-box-group-2 {
+        justify-content: center;
+        text-align: center; 
+    }
+
+    .content-box {
+        background-color: lightslategray;
+        margin: 1% 1%;
+        max-width: 80%;
+        padding: 2% 5% 15%;
+        text-align: center;
+        font-size: 20px;
+        width: 95%;    
+    }
+
+    .content-box-2 {
+        background-color: lightslategray;
+        margin: 1% 1%;
+        max-width: 80%;
+        padding: 2% 5% 15%;
+        text-align: center;
+        font-size: 20px;
+        width: 95%;    
+    }
+
+    .call-to-action {
+        text-align: center;
+        background-color: lightskyblue;
+        padding: 2%;
+        width: 25%;
+        margin: 2% auto;
+        font-size: 20px;
+    }
+
+
+
+}
+    /* The side navigation menu */
+	.sidenav {
+        display: block;
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0; /* Stay at the top */
+        right: 0;
+        background-color: #111; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 60px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+      }
+  
+      /* The navigation menu links */
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+
+
+@media (max-width: 500px) {
+    .title {
+        text-align: left;
+        margin: 0 auto;
+        width: 90%;
+        padding: 2.5px 0 2.5px 5px;
+        font-size: 17.5px;
+    }
+    
+    .ul-items {
+        display: none;
+    }
+
+    .items {
+        display: none;
+    }
+
+    .catalog {
+        display: flex;
+        width: 7.5%;
+        height: 7.5%;
+
+    }
+
+    .welcome-message {
+        font-size: 30px;
+        width: 100%;
+        padding: 25% 0;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        text-align: center;
+        margin: 2.5% 1.5% 1.5%;
+        font-size: 20px;
+    }    
+
+    .content-box-group {
+        display: block;
+        justify-content: center;
+        text-align: center; 
+    }
+    
+    .content-box {
+        background-color: lightslategray;
+        margin: 3% 0%;
+        max-width: 100%;
+        padding: 2% 5% 15%;
+        text-align: center;
+        font-size: 20px;
+        width: 90%;    
+    }
+
+    .content-box-group-hide {
+        display: block;
+        justify-content: center;
+        text-align: center; 
+    }
+
+    .content-box-2 {
+        background-color: lightslategray;
+        margin: 3% 0%;
+        max-width: 100%;
+        padding: 2% 5% 15%;
+        text-align: center;
+        font-size: 20px;
+        width: 90%;    
+    }
+
+    .call-to-action {
+        text-align: center;
+        background-color: lightskyblue;
+        padding: 2%;
+        width: 30%;
+        margin: 2% auto;
+        font-size: 15px;
+    }
+
+}
