@@ -1,3 +1,4 @@
+//Assignment 1: Your First Web Server
 //測試用文字
 console.log("Local host start running!!");
 
@@ -15,6 +16,8 @@ console.log("Local host start running!!");
 //server.listen(port, hostname, () => {
 //  console.log(`Server running at http://${hostname}:${port}/`);
 //});
+
+
 
 
 
@@ -47,6 +50,10 @@ server.get('/getData', (req, res) => {
 server.listen(port, () => {
   console.log(`Example server listening at http://localhost:${port}`)
 })
+
+
+
+
 
 //Assignment 3: Connect to Backend API by AJAX
 server.use(express.static('public'))
