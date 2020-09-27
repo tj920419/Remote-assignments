@@ -1,0 +1,49 @@
+<!doctype html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>The HTML5 Template</title>
+    </head>
+    <body>
+        <input value="請輸入正整數n" id="myText"><button id="ajaxButton" type="button">Make a request to calculate</button>
+        <div>1+2+....+n = <h2 id="sum">_____</h2></div>
+      <script>
+        // 參考 https://developer.mozilla.org/zh-TW/docs/Web/Guide/AJAX/Getting_Started
+        // 發出 ajax 請求
+        let httpRequest;
+        let url = "http://localhost:3000/getData"
+
+        // 點擊按鈕時觸發 makeRequest function
+        document.getElementById("ajaxButton").addEventListener('click', makeRequest);
+
+        if (window.XMLHttpRequest) { // Mozilla, Safari, IE7+ ...
+            httpRequest = new XMLHttpRequest();
+        } else if (window.ActiveXObject) { // IE 6 and older
+            httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        function makeRequest() {
+          // 找到使用者輸入的正整數
+          let params = document.getElementById("myText").value
+
+          // 伺服器傳回資料後，觸發 alertContents function
+          httpRequest.onreadystatechange = alertContents;
+          // 向後端發出GET請求，api路徑為 http://localhost:3000/getData?number=使用者輸入的正整數
+          httpRequest.open('GET', url+"?number="+params, true);
+          httpRequest.send();
+        }
+        
+        function alertContents() {
+          if (httpRequest.readyState === XMLHttpRequest.DONE) {
+            if (httpRequest.status === 200) { // 一切 ok
+              // 把後端傳回來的資料塞進 id="sum" 的 dom 元素，就可以在前端頁面看到了！
+              document.getElementById("sum").innerHTML = httpRequest.responseText;
+            } else {
+              alert('There was a problem with the request.');
+            }
+          }
+        }
+
+      </script>
+    </body>
+</html>
