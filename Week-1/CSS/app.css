@@ -4,7 +4,6 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
     background-color: lightgrey;
     font-size: 30px;
     width: 100%;
