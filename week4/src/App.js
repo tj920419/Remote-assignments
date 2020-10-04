@@ -6,7 +6,20 @@ function Newbox(props) {
   return <div class="content-box">{props.name}</div>;
 };
 
-function App() {
+
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      msg: "Welcome to my page!"
+    };
+  }
+  handleClick(words) {
+    this.setState({ msg: words });
+  }
+  render() {
   return (
     <div className="App">
               <header>
@@ -28,7 +41,7 @@ function App() {
         </header>
         
         <nav>
-            <h1 class="welcome-message" id='welcome'>Welcome to my page!</h1>
+            <h1 class="welcome-message" id='welcome'  onClick={() => this.handleClick("Have a nice day!")}>{this.state.msg}</h1>
         </nav>
 
             <h2 class="section-title">Section Title</h2>
@@ -91,6 +104,7 @@ function App() {
 */}
     </div>
   );
+}
 }
 
 export default App;
